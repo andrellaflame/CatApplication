@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>destination</key>
+	<string>export</string>
+	<key>method</key>
+	<string>development</string>
+	<key>signingStyle</key>
+	<string>manual</string>
+	<key>teamID</key>
+	<string>VNU8KKW4GG</string>
+	<key>signingCertificate</key>
+	<string>iPhone Developer: Andrii Sulimenko (3TD4AYSL28)</string>
+	<key>provisioningProfiles</key>
+	<dict>
+		<key>ua.edu.ukma.CatApplication</key>
+		<string>Sulimenko Andrii</string>
+	</dict>
+</dict>
+</plist>

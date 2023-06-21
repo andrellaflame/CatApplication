@@ -1,0 +1,63 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:ios)
+
+platform :ios do
+  desc "Testing lane"
+  lane :custom_lane do
+    puts("Hello, world!")
+    # add actions here: https://docs.fastlane.tools/actions
+  end
+
+  desc "Lane for project build and export. App distribution on Firebase"
+  lane :build_and_export do
+    # call lane for incrementing build number
+    # increment_version
+    latest_release = firebase_app_distribution_get_latest_release(
+      app: "1:940572791473:ios:65626c0ffa269123e20890"
+    )
+
+    # increment_version_number(
+    #   xcodeproj: './CatApplication/CatApplication.xcodeproj',
+    #   version_number: latest_release[:version_number].to_i + 0.1,
+    # )
+
+    puts("old_buildVersion: #{latest_release[:buildVersion].to_i}")
+
+    increment_build_number(
+      xcodeproj: './CatApplication/CatApplication.xcodeproj',
+      build_number: latest_release[:buildVersion].to_i + 1,
+    )
+
+    # gym application build
+    gym
+    puts("gym action is proceeded successfully!")
+
+    # firebase app distribution upload   
+    firebase_app_distribution(
+      app: "1:940572791473:ios:65626c0ffa269123e20890",
+      testers: "o.frankiv@ukma.edu.ua",
+      release_notes: "Lots of amazing new features to test out!",
+    )
+    puts("firebase_app_distribution action is proceeded successfully!")
+  end
+
+  desc "Lane for taking screenshots of the application"
+  lane :take_screenshots do
+    snapshot
+    puts("snapshot action is proceeded successfully!")
+  end
+end
