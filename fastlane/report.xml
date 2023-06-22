@@ -5,27 +5,7 @@
     
     
       
-      <testcase classname="fastlane.lanes" name="0: default_platform" time="0.000196">
-        
-      </testcase>
-    
-      
-      <testcase classname="fastlane.lanes" name="1: firebase_app_distribution_get_latest_release" time="0.558559">
-        
-      </testcase>
-    
-      
-      <testcase classname="fastlane.lanes" name="2: increment_build_number" time="1.860009">
-        
-      </testcase>
-    
-      
-      <testcase classname="fastlane.lanes" name="3: gym" time="175.300408">
-        
-      </testcase>
-    
-      
-      <testcase classname="fastlane.lanes" name="4: firebase_app_distribution" time="12.151797">
+      <testcase classname="fastlane.lanes" name="0: default_platform" time="0.00017">
         
       </testcase>
     
