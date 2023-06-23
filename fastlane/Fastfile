@@ -51,6 +51,7 @@ platform :ios do
       app: "1:940572791473:ios:65626c0ffa269123e20890",
       testers: "o.frankiv@ukma.edu.ua",
       release_notes: "Lots of amazing new features to test out!",
+      firebase_cli_token: ENV['1//01b5jWuo4KhBBCgYIARAAGAESNwF-L9Irt7O1su_1_Nixh6qssuYjYyJJem2J5ppBE7AIEAWK1TxBgqseMY6MITY_NmpXSsqnaJc'],
     )
     puts("firebase_app_distribution action is proceeded successfully!")
   end
