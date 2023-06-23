@@ -29,11 +29,6 @@ platform :ios do
       app: "1:940572791473:ios:65626c0ffa269123e20890"
     )
 
-    # increment_version_number(
-    #   xcodeproj: './CatApplication/CatApplication.xcodeproj',
-    #   version_number: latest_release[:version_number].to_i + 0.1,
-    # )
-
     puts("old_buildVersion: #{latest_release[:buildVersion].to_i}")
 
     # increment_version
