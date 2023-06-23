@@ -24,6 +24,8 @@ platform :ios do
 
   desc "Lane for project build and export. App distribution on Firebase"
   lane :build_and_export do
+    match
+
     # call lane for incrementing build number
     latest_release = firebase_app_distribution_get_latest_release(
       app: "1:940572791473:ios:65626c0ffa269123e20890"
