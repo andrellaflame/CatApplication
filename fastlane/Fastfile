@@ -29,6 +29,7 @@ platform :ios do
       app: "1:940572791473:ios:65626c0ffa269123e20890"
     )
 
+    # print old version
     puts("old_buildVersion: #{latest_release[:buildVersion].to_i}")
 
     # increment_version
