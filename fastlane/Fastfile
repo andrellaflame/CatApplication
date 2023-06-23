@@ -57,6 +57,7 @@ platform :ios do
 
   desc "Lane for taking screenshots of the application"
   lane :take_screenshots do
+    # snapshot call
     snapshot
     puts("snapshot action is proceeded successfully!")
   end
